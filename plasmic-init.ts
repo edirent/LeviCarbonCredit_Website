@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import PoolAnimation from "./components/PoolAnimation";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -15,6 +16,13 @@ export const PLASMIC = initPlasmicLoader({
   preview: false,
 });
 
+PLASMIC.registerComponent(PoolAnimation, {
+  name: "PoolAnimation",
+  props: {
+    speed: { type: "number", defaultValue: 1 },
+    color: { type: "string", defaultValue: "#00D1B2" },
+  },
+});
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
 // And configure your Plasmic project to use the host url pointing at
