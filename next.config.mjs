@@ -1,27 +1,31 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: { ignoreDuringBuilds: true }, // 先上线再慢慢收紧
-  typescript: { ignoreBuildErrors: false },
+  eslint: { ignoreDuringBuilds: true },
   poweredByHeader: false,
-  compress: true, // 开启 gzip
+  compress: true,
   images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      { protocol: "https", hostname: "**" } // 若图片托管在外部域名
-    ],
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
-  // 若需要：导出 headers 提升缓存
   async headers() {
     return [
+      // 缓存 Next 产物
       {
-        source: "/(.*)\\.(?:js|css|svg|png|jpg|jpeg|gif|webp|avif|woff2?)$",
+        source: '/_next/static/:path*',
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // 缓存常见静态资源（注意：这里用普通分组 ()，不用 (?:)）
+      {
+        source: '/:path*\\.(js|css|svg|png|jpg|jpeg|gif|webp|avif|woff2)$',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
   },
-  // ISR 已在页面 getStaticProps 的 revalidate 中生效
 };
 
 export default nextConfig;
