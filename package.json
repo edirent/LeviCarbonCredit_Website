@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "@plasmicapp/host": "^1.0.225",
     "@plasmicapp/loader-nextjs": "^1.0.438",
     "next": "14.2.32",
     "react": "^18",
