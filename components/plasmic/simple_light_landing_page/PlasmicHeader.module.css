@@ -1,0 +1,103 @@
+.root {
+  width: 100%;
+  height: auto;
+  max-width: var(--token-jSicB0NbW00A);
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 16px 8px;
+}
+.link {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.svg__hq2Rj {
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  column-gap: 20px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox {
+    column-gap: 16px;
+    row-gap: 0px;
+  }
+}
+.button__hFvI:global(.__wab_instance) {
+  position: relative;
+}
+.svg___4Ejc {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__cl2It {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.button__tvRwx:global(.__wab_instance) {
+  position: relative;
+}
+.svg__vv5Ws {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__msdg7 {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.button__elfF6:global(.__wab_instance) {
+  position: relative;
+}
+.svg__qecno {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__ctvG {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.button__y1M5:global(.__wab_instance) {
+  position: relative;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button__y1M5:global(.__wab_instance) {
+    display: none;
+  }
+}
+.svg__rxy2D {
+  position: relative;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+}
+.svg__ciXnM {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
